@@ -1,0 +1,96 @@
+
+
+*
+{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #000;
+}  
+
+
+nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 8px; 
+    width: 524px;
+    height: 50px;
+    background-color: #000;
+}
+
+nav  a {
+    position: relative;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 500;
+    color: #fff;    
+    text-decoration: none;
+    padding: 0 23px;
+    z-index: 1;
+    text-decoration: none;
+}
+
+
+nav span
+{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 95px;
+    height: 100%;
+    background: linear-gradient(45deg, #4f1919, #ff3333);
+    border-radius: 8px;
+    transition: .5s;
+}
+
+
+:root {
+    --base-width: 95px;
+}
+
+nav a:hover ~ span {
+    width: var(--base-width);
+}
+
+nav a:nth-child(1):hover ~ span {
+    left: calc(var(--base-width) * 0);
+}
+
+nav a:nth-child(2):hover ~ span {
+    left: calc(var(--base-width) * 1);
+}
+
+nav a:nth-child(3):hover ~ span {
+    left: calc(var(--base-width) * 2);
+    width: 110px;
+}
+
+nav a:nth-child(4):hover ~ span {
+    left: calc(var(--base-width) * 3 + (115px - var(--base-width)) / 2);
+    width: 115px;
+}
+
+nav a:nth-child(5):hover ~ span {
+    left: calc(var(--base-width) * 4 + (115px - var(--base-width)) / 2);
+    width: 115px;
+}
+
+
+
+
+
